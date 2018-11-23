@@ -1,0 +1,65 @@
+{
+  "connection": "default",
+  "collectionName": "organizaciones",
+  "info": {
+    "name": "organizaciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "juzgadomenores": {
+      "collection": "juzgadomenores",
+      "via": "organizaciones",
+      "dominant": true
+    },
+    "siglas": {
+      "default": "",
+      "type": "string"
+    },
+    "juzgadoejecucion": {
+      "model": "juzgadoejecucion"
+    },
+    "areastrabajo": {
+      "model": "areastrabajo"
+    },
+    "inscrita_conna": {
+      "default": false,
+      "type": "boolean"
+    },
+    "tiposervicios": {
+      "collection": "tiposervicios",
+      "via": "organizaciones",
+      "dominant": true
+    },
+    "procesosadmisions": {
+      "collection": "procesosadmision",
+      "via": "organizaciones",
+      "dominant": true
+    },
+    "lugaresprocedencia": {
+      "collection": "municipio",
+      "via": "organizaciones",
+      "dominant": true
+    },
+    "municipio": {
+      "model": "municipio"
+    },
+    "problemas": {
+      "collection": "problema",
+      "via": "organizaciones",
+      "dominant": true
+    },
+    "direccion": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

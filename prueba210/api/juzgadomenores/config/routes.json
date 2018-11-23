@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/juzgadomenores",
+      "handler": "Juzgadomenores.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/juzgadomenores/count",
+      "handler": "Juzgadomenores.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/juzgadomenores/:id",
+      "handler": "Juzgadomenores.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/juzgadomenores",
+      "handler": "Juzgadomenores.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/juzgadomenores/:id",
+      "handler": "Juzgadomenores.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/juzgadomenores/:id",
+      "handler": "Juzgadomenores.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/juzgadomenores/:id/relationships/:relation",
+      "handler": "Juzgadomenores.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/juzgadomenores/:id/relationships/:relation",
+      "handler": "Juzgadomenores.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/juzgadomenores/:id/relationships/:relation",
+      "handler": "Juzgadomenores.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

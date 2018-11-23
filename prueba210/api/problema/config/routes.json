@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/problemas",
+      "handler": "Problema.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/problemas/count",
+      "handler": "Problema.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/problemas/:id",
+      "handler": "Problema.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/problemas",
+      "handler": "Problema.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/problemas/:id",
+      "handler": "Problema.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/problemas/:id",
+      "handler": "Problema.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/problemas/:id/relationships/:relation",
+      "handler": "Problema.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/problemas/:id/relationships/:relation",
+      "handler": "Problema.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/problemas/:id/relationships/:relation",
+      "handler": "Problema.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

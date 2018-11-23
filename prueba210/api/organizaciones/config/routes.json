@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/organizaciones",
+      "handler": "Organizaciones.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/organizaciones/count",
+      "handler": "Organizaciones.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/organizaciones/:id",
+      "handler": "Organizaciones.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/organizaciones",
+      "handler": "Organizaciones.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/organizaciones/:id",
+      "handler": "Organizaciones.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/organizaciones/:id",
+      "handler": "Organizaciones.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/organizaciones/:id/relationships/:relation",
+      "handler": "Organizaciones.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/organizaciones/:id/relationships/:relation",
+      "handler": "Organizaciones.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/organizaciones/:id/relationships/:relation",
+      "handler": "Organizaciones.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

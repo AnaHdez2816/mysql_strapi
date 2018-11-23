@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/municipios",
+      "handler": "Municipio.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/municipios/count",
+      "handler": "Municipio.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/municipios/:id",
+      "handler": "Municipio.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/municipios",
+      "handler": "Municipio.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/municipios/:id",
+      "handler": "Municipio.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/municipios/:id",
+      "handler": "Municipio.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/municipios/:id/relationships/:relation",
+      "handler": "Municipio.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/municipios/:id/relationships/:relation",
+      "handler": "Municipio.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/municipios/:id/relationships/:relation",
+      "handler": "Municipio.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

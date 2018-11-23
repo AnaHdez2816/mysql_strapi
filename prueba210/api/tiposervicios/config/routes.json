@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tiposervicios",
+      "handler": "Tiposervicios.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tiposervicios/count",
+      "handler": "Tiposervicios.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tiposervicios/:id",
+      "handler": "Tiposervicios.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tiposervicios",
+      "handler": "Tiposervicios.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tiposervicios/:id",
+      "handler": "Tiposervicios.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tiposervicios/:id",
+      "handler": "Tiposervicios.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tiposervicios/:id/relationships/:relation",
+      "handler": "Tiposervicios.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tiposervicios/:id/relationships/:relation",
+      "handler": "Tiposervicios.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tiposervicios/:id/relationships/:relation",
+      "handler": "Tiposervicios.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

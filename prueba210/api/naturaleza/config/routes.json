@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/naturalezas",
+      "handler": "Naturaleza.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/naturalezas/count",
+      "handler": "Naturaleza.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/naturalezas/:id",
+      "handler": "Naturaleza.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/naturalezas",
+      "handler": "Naturaleza.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/naturalezas/:id",
+      "handler": "Naturaleza.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/naturalezas/:id",
+      "handler": "Naturaleza.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/naturalezas/:id/relationships/:relation",
+      "handler": "Naturaleza.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/naturalezas/:id/relationships/:relation",
+      "handler": "Naturaleza.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/naturalezas/:id/relationships/:relation",
+      "handler": "Naturaleza.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

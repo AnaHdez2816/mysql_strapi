@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/areastrabajos",
+      "handler": "Areastrabajo.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/areastrabajos/count",
+      "handler": "Areastrabajo.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/areastrabajos/:id",
+      "handler": "Areastrabajo.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/areastrabajos",
+      "handler": "Areastrabajo.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/areastrabajos/:id",
+      "handler": "Areastrabajo.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/areastrabajos/:id",
+      "handler": "Areastrabajo.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/areastrabajos/:id/relationships/:relation",
+      "handler": "Areastrabajo.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/areastrabajos/:id/relationships/:relation",
+      "handler": "Areastrabajo.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/areastrabajos/:id/relationships/:relation",
+      "handler": "Areastrabajo.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

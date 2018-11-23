@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "departamentos",
+  "info": {
+    "name": "departamentos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

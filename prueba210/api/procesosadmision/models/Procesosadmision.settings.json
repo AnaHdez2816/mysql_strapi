@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "procesosadmisions",
+  "info": {
+    "name": "procesosadmision",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "organizaciones": {
+      "collection": "organizaciones",
+      "via": "procesosadmisions"
+    }
+  }
+}

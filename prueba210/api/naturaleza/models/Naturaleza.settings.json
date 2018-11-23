@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "naturalezas",
+  "info": {
+    "name": "naturaleza",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

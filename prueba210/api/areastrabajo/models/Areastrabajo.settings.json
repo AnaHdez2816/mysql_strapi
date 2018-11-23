@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "areastrabajos",
+  "info": {
+    "name": "areastrabajo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

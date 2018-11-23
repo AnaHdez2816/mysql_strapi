@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/juzgadoejecucions",
+      "handler": "Juzgadoejecucion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/juzgadoejecucions/count",
+      "handler": "Juzgadoejecucion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/juzgadoejecucions/:id",
+      "handler": "Juzgadoejecucion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/juzgadoejecucions",
+      "handler": "Juzgadoejecucion.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/juzgadoejecucions/:id",
+      "handler": "Juzgadoejecucion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/juzgadoejecucions/:id",
+      "handler": "Juzgadoejecucion.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/juzgadoejecucions/:id/relationships/:relation",
+      "handler": "Juzgadoejecucion.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/juzgadoejecucions/:id/relationships/:relation",
+      "handler": "Juzgadoejecucion.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/juzgadoejecucions/:id/relationships/:relation",
+      "handler": "Juzgadoejecucion.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

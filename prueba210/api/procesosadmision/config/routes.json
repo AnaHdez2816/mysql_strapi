@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/procesosadmisions",
+      "handler": "Procesosadmision.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/procesosadmisions/count",
+      "handler": "Procesosadmision.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/procesosadmisions/:id",
+      "handler": "Procesosadmision.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/procesosadmisions",
+      "handler": "Procesosadmision.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/procesosadmisions/:id",
+      "handler": "Procesosadmision.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/procesosadmisions/:id",
+      "handler": "Procesosadmision.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/procesosadmisions/:id/relationships/:relation",
+      "handler": "Procesosadmision.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/procesosadmisions/:id/relationships/:relation",
+      "handler": "Procesosadmision.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/procesosadmisions/:id/relationships/:relation",
+      "handler": "Procesosadmision.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

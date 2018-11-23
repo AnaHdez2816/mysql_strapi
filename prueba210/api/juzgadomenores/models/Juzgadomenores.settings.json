@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "juzgadomenores",
+  "info": {
+    "name": "juzgadomenores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "organizaciones": {
+      "collection": "organizaciones",
+      "via": "juzgadomenores"
+    }
+  }
+}
