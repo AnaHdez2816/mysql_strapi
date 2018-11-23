@@ -14,6 +14,10 @@
     "nombre": {
       "default": "",
       "type": "string"
+    },
+    "gdfgdfs": {
+      "collection": "gdfgdf",
+      "via": "departamentos"
     }
   }
 }

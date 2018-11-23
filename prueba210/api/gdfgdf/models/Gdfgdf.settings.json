@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "gdfgdfs",
+  "info": {
+    "name": "gdfgdf",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "departamentos": {
+      "collection": "departamentos",
+      "via": "gdfgdfs",
+      "dominant": true
+    }
+  }
+}

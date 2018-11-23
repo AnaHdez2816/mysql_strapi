@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gdfgdfs",
+      "handler": "Gdfgdf.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gdfgdfs/count",
+      "handler": "Gdfgdf.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gdfgdfs/:id",
+      "handler": "Gdfgdf.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gdfgdfs",
+      "handler": "Gdfgdf.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gdfgdfs/:id",
+      "handler": "Gdfgdf.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gdfgdfs/:id",
+      "handler": "Gdfgdf.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gdfgdfs/:id/relationships/:relation",
+      "handler": "Gdfgdf.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gdfgdfs/:id/relationships/:relation",
+      "handler": "Gdfgdf.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gdfgdfs/:id/relationships/:relation",
+      "handler": "Gdfgdf.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
