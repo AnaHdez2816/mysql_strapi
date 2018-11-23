@@ -15,9 +15,9 @@
       "default": "",
       "type": "string"
     },
-    "organizaciones": {
+    "org": {
       "collection": "organizaciones",
-      "via": "procesosadmisions"
+      "via": "admision"
     }
   }
 }

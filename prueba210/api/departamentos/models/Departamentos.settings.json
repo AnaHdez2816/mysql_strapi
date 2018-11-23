@@ -18,6 +18,10 @@
     "gdfgdfs": {
       "collection": "gdfgdf",
       "via": "departamentos"
+    },
+    "gdfgd": {
+      "collection": "gdfgdf",
+      "via": "departamento"
     }
   }
 }

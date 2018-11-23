@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "gdfgdfs",
+  "collectionName": "",
   "info": {
     "name": "gdfgdf",
     "description": ""
@@ -14,6 +14,11 @@
     "departamentos": {
       "collection": "departamentos",
       "via": "gdfgdfs",
+      "dominant": true
+    },
+    "departamento": {
+      "collection": "departamentos",
+      "via": "gdfgd",
       "dominant": true
     }
   }

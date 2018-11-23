@@ -39,11 +39,6 @@
       "via": "organizaciones",
       "dominant": true
     },
-    "procesosadmisions": {
-      "collection": "procesosadmision",
-      "via": "organizaciones",
-      "dominant": true
-    },
     "lugaresprocedencia": {
       "collection": "municipio",
       "via": "organizaciones",
@@ -52,14 +47,19 @@
     "municipio": {
       "model": "municipio"
     },
-    "problemas": {
+    "problem": {
       "collection": "problema",
-      "via": "organizaciones",
+      "via": "org",
       "dominant": true
     },
     "direccion": {
       "default": "",
       "type": "text"
+    },
+    "admision": {
+      "collection": "procesosadmision",
+      "via": "org",
+      "dominant": true
     }
   }
 }
