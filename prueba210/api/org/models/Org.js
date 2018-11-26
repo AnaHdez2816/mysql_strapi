@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Organizaciones` model.
+ * Lifecycle callbacks for the `Org` model.
  */
 
 module.exports = {

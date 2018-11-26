@@ -1,0 +1,68 @@
+{
+  "connection": "default",
+  "collectionName": "orgs",
+  "info": {
+    "name": "org",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nombre": {
+      "default": "",
+      "type": "string"
+    },
+    "direccion": {
+      "default": "",
+      "type": "text"
+    },
+    "inscrita": {
+      "default": false,
+      "type": "boolean"
+    },
+    "departamentos": {
+      "model": "departamentos",
+      "via": "org"
+    },
+    "juzgadoejecucion": {
+      "model": "juzgadoejecucion"
+    },
+    "juzgadomenores": {
+      "collection": "juzgadomenores",
+      "via": "orgs",
+      "dominant": true
+    },
+    "procedencia": {
+      "collection": "municipio",
+      "via": "orgs",
+      "dominant": true
+    },
+    "municipio": {
+      "model": "municipio"
+    },
+    "naturaleza": {
+      "model": "naturaleza"
+    },
+    "problema": {
+      "collection": "problema",
+      "via": "org",
+      "dominant": true
+    },
+    "procesosadmision": {
+      "model": "procesosadmision"
+    },
+    "tiposervicios": {
+      "collection": "tiposervicios",
+      "via": "orgs",
+      "dominant": true
+    },
+    "areastrabajos": {
+      "collection": "areastrabajo",
+      "via": "orgs",
+      "dominant": true
+    }
+  }
+}

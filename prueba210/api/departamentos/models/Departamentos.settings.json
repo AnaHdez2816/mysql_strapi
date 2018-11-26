@@ -15,13 +15,9 @@
       "default": "",
       "type": "string"
     },
-    "gdfgdfs": {
-      "collection": "gdfgdf",
+    "org": {
+      "model": "org",
       "via": "departamentos"
-    },
-    "gdfgd": {
-      "collection": "gdfgdf",
-      "via": "departamento"
     }
   }
 }

@@ -15,9 +15,9 @@
       "default": "",
       "type": "string"
     },
-    "organizaciones": {
-      "collection": "organizaciones",
-      "via": "lugaresprocedencia"
+    "orgs": {
+      "collection": "org",
+      "via": "procedencia"
     }
   }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Organizaciones.js service
+ * Org.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -15,20 +15,20 @@ const utils = require('strapi-hook-bookshelf/lib/utils/');
 module.exports = {
 
   /**
-   * Promise to fetch all organizaciones.
+   * Promise to fetch all orgs.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Bookshelf.
-    const filters = strapi.utils.models.convertParams('organizaciones', params);
+    const filters = strapi.utils.models.convertParams('org', params);
     // Select field to populate.
-    const populate = Organizaciones.associations
+    const populate = Org.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias);
 
-    return Organizaciones.query(function(qb) {
+    return Org.query(function(qb) {
       _.forEach(filters.where, (where, key) => {
         if (_.isArray(where.value) && where.symbol !== 'IN') {
           for (const value in where.value) {
@@ -51,33 +51,33 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an organizaciones.
+   * Promise to fetch a/an org.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Organizaciones.associations
+    const populate = Org.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias);
 
-    return Organizaciones.forge(_.pick(params, 'id')).fetch({
+    return Org.forge(_.pick(params, 'id')).fetch({
       withRelated: populate
     });
   },
 
   /**
-   * Promise to count a/an organizaciones.
+   * Promise to count a/an org.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Bookshelf.
-    const filters = strapi.utils.models.convertParams('organizaciones', params);
+    const filters = strapi.utils.models.convertParams('org', params);
 
-    return Organizaciones.query(function(qb) {
+    return Org.query(function(qb) {
       _.forEach(filters.where, (where, key) => {
         if (_.isArray(where.value)) {
           for (const value in where.value) {
@@ -91,50 +91,50 @@ module.exports = {
   },
 
   /**
-   * Promise to add a/an organizaciones.
+   * Promise to add a/an org.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Organizaciones.associations.map(ast => ast.alias));
-    const data = _.omit(values, Organizaciones.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Org.associations.map(ast => ast.alias));
+    const data = _.omit(values, Org.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Organizaciones.forge(data).save();
+    const entry = await Org.forge(data).save();
 
     // Create relational data and return the entry.
-    return Organizaciones.updateRelations({ id: entry.id , values: relations });
+    return Org.updateRelations({ id: entry.id , values: relations });
   },
 
   /**
-   * Promise to edit a/an organizaciones.
+   * Promise to edit a/an org.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Organizaciones.associations.map(ast => ast.alias));
-    const data = _.omit(values, Organizaciones.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Org.associations.map(ast => ast.alias));
+    const data = _.omit(values, Org.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = Organizaciones.forge(params).save(data);
+    const entry = Org.forge(params).save(data);
 
     // Create relational data and return the entry.
-    return Organizaciones.updateRelations(Object.assign(params, { values: relations }));
+    return Org.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an organizaciones.
+   * Promise to remove a/an org.
    *
    * @return {Promise}
    */
 
   remove: async (params) => {
     params.values = {};
-    Organizaciones.associations.map(association => {
+    Org.associations.map(association => {
       switch (association.nature) {
         case 'oneWay':
         case 'oneToOne':
@@ -151,45 +151,45 @@ module.exports = {
       }
     });
 
-    await Organizaciones.updateRelations(params);
+    await Org.updateRelations(params);
 
-    return Organizaciones.forge(params).destroy();
+    return Org.forge(params).destroy();
   },
 
   /**
-   * Promise to search a/an organizaciones.
+   * Promise to search a/an org.
    *
    * @return {Promise}
    */
 
   search: async (params) => {
     // Convert `params` object to filters compatible with Bookshelf.
-    const filters = strapi.utils.models.convertParams('organizaciones', params);
+    const filters = strapi.utils.models.convertParams('org', params);
     // Select field to populate.
-    const populate = Organizaciones.associations
+    const populate = Org.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias);
 
-    const associations = Organizaciones.associations.map(x => x.alias);
-    const searchText = Object.keys(Organizaciones._attributes)
-      .filter(attribute => attribute !== Organizaciones.primaryKey && !associations.includes(attribute))
-      .filter(attribute => ['string', 'text'].includes(Organizaciones._attributes[attribute].type));
+    const associations = Org.associations.map(x => x.alias);
+    const searchText = Object.keys(Org._attributes)
+      .filter(attribute => attribute !== Org.primaryKey && !associations.includes(attribute))
+      .filter(attribute => ['string', 'text'].includes(Org._attributes[attribute].type));
 
-    const searchNoText = Object.keys(Organizaciones._attributes)
-      .filter(attribute => attribute !== Organizaciones.primaryKey && !associations.includes(attribute))
-      .filter(attribute => !['string', 'text', 'boolean', 'integer', 'decimal', 'float'].includes(Organizaciones._attributes[attribute].type));
+    const searchNoText = Object.keys(Org._attributes)
+      .filter(attribute => attribute !== Org.primaryKey && !associations.includes(attribute))
+      .filter(attribute => !['string', 'text', 'boolean', 'integer', 'decimal', 'float'].includes(Org._attributes[attribute].type));
 
-    const searchInt = Object.keys(Organizaciones._attributes)
-      .filter(attribute => attribute !== Organizaciones.primaryKey && !associations.includes(attribute))
-      .filter(attribute => ['integer', 'decimal', 'float'].includes(Organizaciones._attributes[attribute].type));
+    const searchInt = Object.keys(Org._attributes)
+      .filter(attribute => attribute !== Org.primaryKey && !associations.includes(attribute))
+      .filter(attribute => ['integer', 'decimal', 'float'].includes(Org._attributes[attribute].type));
 
-    const searchBool = Object.keys(Organizaciones._attributes)
-      .filter(attribute => attribute !== Organizaciones.primaryKey && !associations.includes(attribute))
-      .filter(attribute => ['boolean'].includes(Organizaciones._attributes[attribute].type));
+    const searchBool = Object.keys(Org._attributes)
+      .filter(attribute => attribute !== Org.primaryKey && !associations.includes(attribute))
+      .filter(attribute => ['boolean'].includes(Org._attributes[attribute].type));
 
     const query = (params._q || '').replace(/[^a-zA-Z0-9.-\s]+/g, '');
 
-    return Organizaciones.query(qb => {
+    return Org.query(qb => {
       // Search in columns which are not text value.
       searchNoText.forEach(attribute => {
         qb.orWhereRaw(`LOWER(${attribute}) LIKE '%${_.toLower(query)}%'`);
@@ -208,7 +208,7 @@ module.exports = {
       }
 
       // Search in columns with text using index.
-      switch (Organizaciones.client) {
+      switch (Org.client) {
         case 'pg': {
           const searchQuery = searchText.map(attribute =>
             _.toLower(attribute) === attribute

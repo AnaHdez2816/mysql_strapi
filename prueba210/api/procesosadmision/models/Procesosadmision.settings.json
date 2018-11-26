@@ -14,10 +14,6 @@
     "nombre": {
       "default": "",
       "type": "string"
-    },
-    "org": {
-      "collection": "organizaciones",
-      "via": "admision"
     }
   }
 }

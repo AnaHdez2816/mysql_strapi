@@ -15,8 +15,8 @@
       "default": "",
       "type": "string"
     },
-    "organizaciones": {
-      "collection": "organizaciones",
+    "orgs": {
+      "collection": "org",
       "via": "juzgadomenores"
     }
   }

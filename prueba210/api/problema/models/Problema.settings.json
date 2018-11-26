@@ -16,8 +16,8 @@
       "type": "string"
     },
     "org": {
-      "collection": "organizaciones",
-      "via": "problem"
+      "collection": "org",
+      "via": "problema"
     }
   }
 }

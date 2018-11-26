@@ -2,72 +2,72 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/gdfgdfs",
-      "handler": "Gdfgdf.find",
+      "path": "/orgs",
+      "handler": "Org.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/gdfgdfs/count",
-      "handler": "Gdfgdf.count",
+      "path": "/orgs/count",
+      "handler": "Org.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/gdfgdfs/:id",
-      "handler": "Gdfgdf.findOne",
+      "path": "/orgs/:id",
+      "handler": "Org.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/gdfgdfs",
-      "handler": "Gdfgdf.create",
+      "path": "/orgs",
+      "handler": "Org.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/gdfgdfs/:id",
-      "handler": "Gdfgdf.update",
+      "path": "/orgs/:id",
+      "handler": "Org.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/gdfgdfs/:id",
-      "handler": "Gdfgdf.destroy",
+      "path": "/orgs/:id",
+      "handler": "Org.destroy",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/gdfgdfs/:id/relationships/:relation",
-      "handler": "Gdfgdf.createRelation",
+      "path": "/orgs/:id/relationships/:relation",
+      "handler": "Org.createRelation",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/gdfgdfs/:id/relationships/:relation",
-      "handler": "Gdfgdf.updateRelation",
+      "path": "/orgs/:id/relationships/:relation",
+      "handler": "Org.updateRelation",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/gdfgdfs/:id/relationships/:relation",
-      "handler": "Gdfgdf.destroyRelation",
+      "path": "/orgs/:id/relationships/:relation",
+      "handler": "Org.destroyRelation",
       "config": {
         "policies": []
       }
