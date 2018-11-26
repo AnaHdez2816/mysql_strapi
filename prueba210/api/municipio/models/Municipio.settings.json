@@ -18,6 +18,14 @@
     "orgs": {
       "collection": "org",
       "via": "procedencia"
+    },
+    "juzgadomenores": {
+      "collection": "juzgadomenores",
+      "via": "municipio",
+      "dominant": true
+    },
+    "juzgadoejecucion": {
+      "model": "juzgadoejecucion"
     }
   }
 }

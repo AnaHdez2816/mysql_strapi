@@ -26,21 +26,10 @@
     "departamentos": {
       "model": "departamentos"
     },
-    "juzgadoejecucion": {
-      "model": "juzgadoejecucion"
-    },
-    "juzgadomenores": {
-      "collection": "juzgadomenores",
-      "via": "orgs",
-      "dominant": true
-    },
     "procedencia": {
       "collection": "municipio",
-      "via": "orgs",
-      "dominant": true
-    },
-    "municipio": {
-      "model": "municipio"
+      "dominant": true,
+      "via": "orgs"
     },
     "naturaleza": {
       "model": "naturaleza"

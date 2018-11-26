@@ -15,8 +15,8 @@
       "default": "",
       "type": "string"
     },
-    "orgs": {
-      "collection": "org",
+    "municipio": {
+      "collection": "municipio",
       "via": "juzgadomenores"
     }
   }
