@@ -24,8 +24,7 @@
       "type": "boolean"
     },
     "departamentos": {
-      "model": "departamentos",
-      "via": "org"
+      "model": "departamentos"
     },
     "juzgadoejecucion": {
       "model": "juzgadoejecucion"
